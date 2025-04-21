@@ -1,0 +1,12 @@
+<div class="app-container">
+  <div class="position-relative">
+    <app-side-bar
+      (sidebarToggle)="onSidebarToggle()"
+      [isSidebarCollapsed]="isSidebarCollapsed"
+    ></app-side-bar>
+  </div>
+  <main class="content" [ngClass]="{ 'content-expanded': isSidebarCollapsed }">
+    <app-header (toggle)="onSidebarToggle()"></app-header>
+    <div class="content-inner"><router-outlet></router-outlet></div>
+  </main>
+</div>
