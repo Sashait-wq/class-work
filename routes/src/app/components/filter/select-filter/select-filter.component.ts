@@ -1,14 +1,16 @@
-import { Component, Input } from '@angular/core';
-import { TextFilter } from '../filter.interface.ts';
-import { FormControl } from '@angular/forms';
+import {Component, Input} from '@angular/core';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
+import {SelectFilter} from '../filter.interface';
 
 @Component({
   selector: 'app-select-filter',
-  imports: [],
+  imports: [
+    ReactiveFormsModule
+  ],
   templateUrl: './select-filter.component.html',
   styleUrl: './select-filter.component.scss',
 })
 export class SelectFilterComponent {
-  @Input() config!: TextFilter;
+  @Input() config!: SelectFilter;
   @Input() control!: FormControl;
 }

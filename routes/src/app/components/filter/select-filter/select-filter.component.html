@@ -1,1 +1,5 @@
-<p>select-filter works!</p>
+<select [formControl]="control">
+  @for (item of config.options; track item) {
+    <option [value]="item.value">{{ item.label }}</option>
+  }
+</select>

@@ -1,1 +1,6 @@
-<p>radio-filter works!</p>
+<label>
+  @for (item of config.options; track item) {
+    {{ item.label }}
+    <input type="radio" [formControl]="control" [value]="item.value">
+  }
+</label>
