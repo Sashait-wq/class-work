@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TextFilter } from '../filter.interface.ts';
+import { TextFilter } from '../filter.interface';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({

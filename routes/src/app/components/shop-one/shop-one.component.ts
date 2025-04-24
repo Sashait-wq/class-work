@@ -1,11 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
-import {
-  TableConfig,
-  GlobalTableComponent,
-  Product,
-} from '../global-table/global-table.component';
-import { PriceComponent } from './columns/price/price.component';
+import {Component} from '@angular/core';
+import {MatTableModule} from '@angular/material/table';
+import {GlobalTableComponent, Product, TableConfig,} from '../global-table/global-table.component';
+import {PriceComponent} from './columns/price/price.component';
 
 const products: Product[] = [
   {
@@ -15,9 +11,9 @@ const products: Product[] = [
     price: 1200,
     inStock: true,
   },
-  { id: 2, name: 'Chair', category: 'Furniture', price: 150, inStock: false },
-  { id: 3, name: 'Pen', category: 'Office', price: 2.5, inStock: true },
-  { id: 4, name: 'Notebook', category: 'Office', price: 5.0, inStock: true },
+  {id: 2, name: 'Chair', category: 'Furniture', price: 150, inStock: false},
+  {id: 3, name: 'Pen', category: 'Office', price: 2.5, inStock: true},
+  {id: 4, name: 'Notebook', category: 'Office', price: 5.0, inStock: true},
   {
     id: 5,
     name: 'Smartphone',
@@ -25,7 +21,7 @@ const products: Product[] = [
     price: 800,
     inStock: false,
   },
-  { id: 6, name: 'Table', category: 'Furniture', price: 300, inStock: true },
+  {id: 6, name: 'Table', category: 'Furniture', price: 300, inStock: true},
   {
     id: 7,
     name: 'Headphones',
@@ -47,8 +43,9 @@ const products: Product[] = [
     price: 20,
     inStock: false,
   },
-  { id: 10, name: 'Mouse', category: 'Electronics', price: 25, inStock: true },
+  {id: 10, name: 'Mouse', category: 'Electronics', price: 25, inStock: true},
 ];
+
 @Component({
   selector: 'app-shop-one',
   templateUrl: './shop-one.component.html',
@@ -63,6 +60,7 @@ export class ShopOneComponent {
       {
         name: 'id',
         label: 'Id',
+        canActivated: true,
       },
       {
         name: 'name',
@@ -80,7 +78,10 @@ export class ShopOneComponent {
       {
         name: 'inStock',
         label: 'InStock',
+        show: false
       },
     ],
   };
 }
+
+// прибрати із списку item in menu
